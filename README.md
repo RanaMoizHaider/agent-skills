@@ -1,6 +1,6 @@
 # Laravel Agents & Skills
 
-A collection of agents and skills for PHP / Laravel development, available as plugins for both [Claude Code](https://code.claude.com) and [Cursor](https://cursor.com).
+A collection of agents and skills for PHP / Laravel development, available as plugins for [Claude Code](https://code.claude.com) and [Cursor](https://cursor.com), with support for [OpenCode](https://opencode.ai).
 
 ## Plugins
 
@@ -32,6 +32,30 @@ A skill for deploying and managing applications on [Laravel Cloud](https://cloud
 /plugin marketplace add laravel/agent-skills
 /plugin install laravel-simplifier@laravel
 /plugin install laravel-cloud@laravel
+```
+
+### OpenCode
+
+Copy the plugin directories into your global `~/.config/opencode/` folder:
+
+**laravel-simplifier**
+
+```bash
+cp -r path/to/agent-skills/laravel-simplifier/.opencode/agents ~/.config/opencode/agents
+```
+
+**laravel-cloud**
+
+```bash
+cp -r path/to/agent-skills/laravel-cloud/.opencode/skills ~/.config/opencode/skills
+```
+
+Or place them in your project's `.opencode/` directory for project-scoped access:
+
+```bash
+mkdir -p .opencode/agents .opencode/skills
+cp -r path/to/agent-skills/laravel-simplifier/.opencode/agents/laravel-simplifier.md .opencode/agents/
+cp -r path/to/agent-skills/laravel-cloud/.opencode/skills/deploying-laravel-cloud .opencode/skills/
 ```
 
 ## Usage
