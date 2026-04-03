@@ -1,5 +1,6 @@
 {
     "name": "laravel-cloud",
+    "displayName": "Laravel Cloud",
     "version": "1.0.0",
     "description": "Deploying and managing apps on Laravel Cloud",
     "author": {
